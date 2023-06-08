@@ -6,7 +6,7 @@
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
-		<RootNamespace>BSE.Maui.Flyout</RootNamespace>
+		<RootNamespace>BSE.Maui.Samples</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -59,6 +59,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AppBSEFlyout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="AppFlyout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -71,6 +74,15 @@
 	  <MauiXaml Update="Views\AboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Controls\Compatibility\Platform\Windows\" />
+	  <Folder Include="Handlers\FlyoutView\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BSE.Maui.Controls\BSE.Maui.Controls.csproj" />
 	</ItemGroup>
 
 </Project>

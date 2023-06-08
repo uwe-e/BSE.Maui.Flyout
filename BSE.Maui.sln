@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSE.Maui.Flyout", "src\BSE.Maui.Flyout\BSE.Maui.Flyout.csproj", "{A83A98BC-7013-417C-A344-693709170ACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSE.Maui.Samples", "src\BSE.Maui.Flyout\BSE.Maui.Samples.csproj", "{A83A98BC-7013-417C-A344-693709170ACF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSE.Maui.Controls", "src\BSE.Maui.Controls\BSE.Maui.Controls.csproj", "{6AA4C825-B912-4647-9D96-29F3B397C29F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{A83A98BC-7013-417C-A344-693709170ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A83A98BC-7013-417C-A344-693709170ACF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A83A98BC-7013-417C-A344-693709170ACF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6AA4C825-B912-4647-9D96-29F3B397C29F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA4C825-B912-4647-9D96-29F3B397C29F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA4C825-B912-4647-9D96-29F3B397C29F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA4C825-B912-4647-9D96-29F3B397C29F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
