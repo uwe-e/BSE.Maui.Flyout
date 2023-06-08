@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace BSE.Maui.Flyout;
+namespace BSE.Maui.Samples;
 
 public static class MauiProgram
 {

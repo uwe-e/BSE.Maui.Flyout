@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:BSE.Maui.Flyout"
-             xmlns:views="clr-namespace:BSE.Maui.Flyout.Views"
-             x:Class="BSE.Maui.Flyout.FlyoutMenuPage"
+             xmlns:local="clr-namespace:BSE.Maui.Samples"
+             xmlns:views="clr-namespace:BSE.Maui.Samples.Views"
+             x:Class="BSE.Maui.Samples.Views.FlyoutMenuPage"
              Title="FlyoutMenuPage">
 
     <CollectionView x:Name="collectionView"
@@ -14,10 +14,10 @@
             <x:Array Type="{x:Type local:FlyoutPageItem}">
                 <local:FlyoutPageItem Title="Contacts"
                                       IconSource="contacts.png"
-                                      TargetType="{x:Type local:MainPage}" />
+                                      TargetType="{x:Type views:MainPage}" />
                 <local:FlyoutPageItem Title="TodoList"
                                       IconSource="todo.png"
-                                      TargetType="{x:Type local:MainPage}" />
+                                      TargetType="{x:Type views:MainPage}" />
                 <local:FlyoutPageItem Title="AboutPage"
                                       IconSource="reminders.png"
                                       TargetType="{x:Type views:AboutPage}" />

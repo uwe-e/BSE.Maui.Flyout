@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BSE.Maui.Flyout
+namespace BSE.Maui.Samples
 {
     public class FlyoutPageItem
     {

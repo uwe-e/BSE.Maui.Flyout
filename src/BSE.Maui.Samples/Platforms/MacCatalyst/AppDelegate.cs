@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace BSE.Maui.Flyout;
+namespace BSE.Maui.Samples;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

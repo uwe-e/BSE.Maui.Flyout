@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace BSE.Maui.Flyout;
+namespace BSE.Maui.Samples;
 
 public class Program
 {

@@ -12,10 +12,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>BSE.Maui.Flyout</ApplicationTitle>
+		<ApplicationTitle>BSE.Maui.Samples</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.BSE.Maui.Flyout</ApplicationId>
+		<ApplicationId>com.companyname.BSE.Maui.Samples</ApplicationId>
 		<ApplicationIdGuid>0489ae04-a200-492b-a073-a2e56e7a9640</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -65,10 +65,10 @@
 	  <MauiXaml Update="AppFlyout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="FlyoutMenuPage.xaml">
+	  <MauiXaml Update="Views\FlyoutMenuPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MainPage.xaml">
+	  <MauiXaml Update="Views\MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\AboutPage.xaml">

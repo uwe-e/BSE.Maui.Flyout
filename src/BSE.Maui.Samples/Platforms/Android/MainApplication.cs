@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace BSE.Maui.Flyout;
+namespace BSE.Maui.Samples;
 
 [Application]
 public class MainApplication : MauiApplication

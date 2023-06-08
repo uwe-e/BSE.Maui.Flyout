@@ -1,4 +1,4 @@
-﻿namespace BSE.Maui.Flyout;
+﻿namespace BSE.Maui.Samples;
 
 public partial class App : Application
 {
