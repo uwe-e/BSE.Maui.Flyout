@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0;net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
@@ -17,9 +17,34 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+
+  <ItemGroup Condition="$(TargetFramework.Contains('-windows')) != true">
+    <Compile Remove="**\*.Windows.cs" />
+    <Compile Remove="**\Platform\Windows\**\*.cs" />
+    <None Include="**\Platform\Windows\**\*.cs" />
+    <MauiXaml Remove="**\Platform\Windows\**\*.xaml" />
+    <None Include="**\Platform\Windows\**\*.xaml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Include="Handlers\FlyoutContainer\FlyoutContainerHandler.Windows.cs" />
+  </ItemGroup>
+
 	<ItemGroup>
-	  <Folder Include="Handlers\" />
-	  <Folder Include="Platforms\Windows\" />
+	  <Folder Include="Platform\Android\" />
+	  <Folder Include="Platform\iOS\" />
+	  <Folder Include="Platform\MacCatalyst\" />
+	  <Folder Include="Platform\Tizen\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Include="Platform\Windows\FlyoutContainerViewStyle.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	  <Page Include="Platform\Windows\Resources.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
 	</ItemGroup>
 
 </Project>

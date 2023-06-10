@@ -2,17 +2,23 @@
 <bse:FlyoutContainer xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                      xmlns:bse="clr-namespace:BSE.Maui.Controls;assembly=BSE.Maui.Controls"
-                     xmlns:local="clr-namespace:BSE.Maui.Samples.Views"
+                     xmlns:views="clr-namespace:BSE.Maui.Samples.Views"
                      x:Class="BSE.Maui.Samples.AppBSEFlyout"
                      Title="AppBSEFlyout">
-    <FlyoutPage.Flyout>
-        <local:FlyoutMenuPage x:Name="flyoutPage" />
-    </FlyoutPage.Flyout>
-    <FlyoutPage.Detail>
+
+    <bse:FlyoutContainer.Flyout>
+        <views:FlyoutMenuPage x:Name="flyoutPage" />
+    </bse:FlyoutContainer.Flyout>
+
+    <bse:FlyoutContainer.Detail>
         <NavigationPage>
             <x:Arguments>
-                <local:MainPage />
+                <views:MainPage />
             </x:Arguments>
         </NavigationPage>
-    </FlyoutPage.Detail>
+    </bse:FlyoutContainer.Detail>
+    
+    <bse:FlyoutContainer.BottomView>
+        <views:BottomView/>
+    </bse:FlyoutContainer.BottomView>
 </bse:FlyoutContainer>

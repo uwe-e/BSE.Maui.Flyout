@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using BSE.Maui.Controls;
+using Microsoft.Extensions.Logging;
 
 namespace BSE.Maui.Samples;
 
@@ -13,7 +14,8 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+			})
+			.UseBSEControls();
 
 #if DEBUG
 		builder.Logging.AddDebug();
