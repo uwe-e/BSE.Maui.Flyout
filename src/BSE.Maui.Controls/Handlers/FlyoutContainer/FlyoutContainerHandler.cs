@@ -1,13 +1,12 @@
 ﻿#nullable disable
 #if WINDOWS || TIZEN
-using System;
-using System.Collections.Generic;
-using System.Text;
 using BSE.Maui.Controls.Platform;
 using Microsoft.Maui.Controls.Platform;
 using Microsoft.Maui.Graphics;
 using Microsoft.Maui.Handlers;
-
+using System;
+using System.Collections.Generic;
+using System.Text;
 using FlyoutCont = BSE.Maui.Controls.FlyoutContainer;
 
 namespace BSE.Maui.Controls.Handlers
@@ -37,18 +36,6 @@ namespace BSE.Maui.Controls.Handlers
         {
         }
 
-        protected override void ConnectHandler(FlyoutContainerView platformView)
-        {
-            base.ConnectHandler(platformView);
-
-            platformView.OnApplyTemplateFinished += OnApplyTemplateFinished;
-        }
-
-        private void OnApplyTemplateFinished(object sender, EventArgs e)
-        {
-            UpdateValue(nameof(FlyoutContainerView.BottomView));
-            UpdateValue(nameof(IFlyoutView.Detail));
-        }
     }
 }
 #endif

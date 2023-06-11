@@ -1,10 +1,5 @@
 ﻿#if WINDOWS
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BSE.Maui.Controls;
 using BSE.Maui.Controls.Platform;
 using Microsoft.Maui.Controls;
@@ -12,6 +7,11 @@ using Microsoft.Maui.Controls.Platform;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 using Microsoft.UI.Xaml.Controls;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using FlyoutCont = BSE.Maui.Controls.FlyoutContainer;
 
 namespace BSE.Maui.Controls.Handlers
@@ -22,6 +22,26 @@ namespace BSE.Maui.Controls.Handlers
         {
             var flyoutView = new FlyoutContainerView();
             return flyoutView;
+        }
+
+        protected override void ConnectHandler(FlyoutContainerView platformView)
+        {
+            base.ConnectHandler(platformView);
+
+            platformView.OnApplyTemplateFinished += OnApplyTemplateFinished;
+        }
+
+        protected override void DisconnectHandler(FlyoutContainerView platformView)
+        {
+            base.DisconnectHandler(platformView);
+
+            platformView.OnApplyTemplateFinished -= OnApplyTemplateFinished;
+        }
+
+        private void OnApplyTemplateFinished(object sender, EventArgs e)
+        {
+            UpdateValue(nameof(FlyoutContainerView.BottomView));
+            UpdateValue(nameof(IFlyoutView.Detail));
         }
 
         public static void MapFlyout(FlyoutContainerHandler handler, IFlyoutView container)
