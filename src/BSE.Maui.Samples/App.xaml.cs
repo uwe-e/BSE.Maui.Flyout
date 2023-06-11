@@ -6,6 +6,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppBSEFlyout();
-	}
+        MainPage = new AppBSEFlyout();
+        //MainPage = new AppFlyout();
+    }
 }

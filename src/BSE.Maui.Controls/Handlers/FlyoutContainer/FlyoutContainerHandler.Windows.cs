@@ -12,9 +12,11 @@ using Microsoft.Maui.Controls.Platform;
 using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 
+using FlyoutCont = BSE.Maui.Controls.FlyoutContainer;
+
 namespace BSE.Maui.Controls.Handlers
 {
-    public partial class FlyoutContainerHandler : ViewHandler<FlyoutContainer, FlyoutContainerView>
+    public partial class FlyoutContainerHandler : ViewHandler<FlyoutCont, FlyoutContainerView>
 	{
         protected override FlyoutContainerView CreatePlatformView()
         {
@@ -24,10 +26,20 @@ namespace BSE.Maui.Controls.Handlers
 
         public static void MapFlyout(FlyoutContainerHandler handler, IFlyoutView container)
         {
+            var t1 = handler.MauiContext;
+            var t2 = handler.VirtualView.Flyout.ToPlatform(handler.MauiContext);
 
+            if (handler.PlatformView is FlyoutContainerView rnv)
+            {
+                if (rnv.NavigationView != null)
+                {
+                    rnv.NavigationView.PaneCustomContent = handler.VirtualView.Flyout.ToPlatform(handler.MauiContext);
+                }
+                
+            }
         }
 
-        public static void MapFlyoutWidth(FlyoutContainerHandler handler, FlyoutContainer container)
+        public static void MapFlyoutWidth(FlyoutContainerHandler handler, FlyoutCont container)
         {
             if (container.Width >= 0)
             {
@@ -40,7 +52,7 @@ namespace BSE.Maui.Controls.Handlers
 			UpdateDetail(handler);
 		}
 
-        public static void MapBottomView(FlyoutContainerHandler handler, FlyoutContainer container)
+        public static void MapBottomView(FlyoutContainerHandler handler, FlyoutCont container)
         {
             if (handler.PlatformView is FlyoutContainerView flyoutContainerView)
             {
