@@ -47,7 +47,7 @@ namespace BSE.Maui.Controls.Handlers
         private void OnApplyTemplateFinished(object sender, EventArgs e)
         {
             UpdateValue(nameof(FlyoutContainerView.BottomView));
-            UpdateValue(nameof(FlyoutContainerView));
+            //UpdateValue(nameof(FlyoutContainerView));
         }
     }
 }

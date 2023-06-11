@@ -71,7 +71,7 @@ namespace BSE.Maui.Controls.Handlers
             _ = handler.MauiContext;
             _ = handler.VirtualView.Detail.ToPlatform(handler.MauiContext);
 
-            //handler.PlatformView.Content = handler.VirtualView.Detail.ToPlatform();
+            handler.PlatformView.Content = handler.VirtualView.Detail.ToPlatform();
         }
     }
 }
