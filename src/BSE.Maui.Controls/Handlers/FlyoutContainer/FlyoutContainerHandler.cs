@@ -17,12 +17,13 @@ namespace BSE.Maui.Controls.Handlers
             new PropertyMapper<FlyoutCont, FlyoutContainerHandler>(ElementMapper)
             {
 #if ANDROID || WINDOWS || TIZEN
-                [nameof(IFlyoutView.Flyout)] = MapFlyout,
+                //[nameof(IFlyoutView.Flyout)] = MapFlyout,
                 [nameof(IFlyoutView.Detail)] = MapDetail,
                 [nameof(FlyoutCont.BottomView)] = MapBottomView,
+                [nameof(FlyoutCont.MenuItems)] = MapMenuItems,
                 //[nameof(IFlyoutView.IsPresented)] = MapIsPresented,
                 //[nameof(IFlyoutView.FlyoutBehavior)] = MapFlyoutBehavior,
-                [nameof(IFlyoutView.FlyoutWidth)] = MapFlyoutWidth,
+                //[nameof(IFlyoutView.FlyoutWidth)] = MapFlyoutWidth,
                 //[nameof(IFlyoutView.IsGestureEnabled)] = MapIsGestureEnabled,
                 //[nameof(IToolbarElement.Toolbar)] = MapToolbar,
 #endif

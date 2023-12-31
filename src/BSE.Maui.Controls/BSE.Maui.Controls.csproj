@@ -20,18 +20,18 @@
 
   <ItemGroup Condition="$(TargetFramework.Contains('-windows')) != true">
     <Compile Remove="**\*.Windows.cs" />
-    <None Include="**\*.Windows.cs"/>
+    <None Include="**\*.Windows.cs" />
     <Compile Remove="**\Platform\Windows\**\*.cs" />
     <None Include="**\Platform\Windows\**\*.cs" />
     <MauiXaml Remove="**\Platform\Windows\**\*.xaml" />
     <None Include="**\Platform\Windows\**\*.xaml" />
   </ItemGroup>
 
-
+<!--
   <ItemGroup>
     <Compile Include="Handlers\FlyoutContainer\FlyoutContainerHandler.Windows.cs" />
   </ItemGroup>
-
+-->
 	<ItemGroup>
 	  <Folder Include="Platform\Android\" />
 	  <Folder Include="Platform\iOS\" />
@@ -44,6 +44,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </Page>
 	  <Page Include="Platform\Windows\Resources.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Page>
+	  <Page Include="Platform\Windows\FlyoutStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </Page>
 	</ItemGroup>

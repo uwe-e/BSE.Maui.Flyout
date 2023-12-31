@@ -6,10 +6,19 @@
                      x:Class="BSE.Maui.Samples.AppBSEFlyout"
                      Title="AppBSEFlyout">
 
-    <bse:FlyoutContainer.Flyout>
+    <!--<bse:FlyoutContainer.Flyout>
         <views:FlyoutMenuPage x:Name="flyoutPage" />
-    </bse:FlyoutContainer.Flyout>
+    </bse:FlyoutContainer.Flyout>-->
 
+    <bse:FlyoutContainer.MenuItems>
+        <bse:FlyoutMenuItem Title="Home">
+            <ShellContent Title="Home"/>
+        </bse:FlyoutMenuItem>
+        <bse:FlyoutMenuItem Title="About">
+            <ShellContent Title="About"/>
+        </bse:FlyoutMenuItem>
+    </bse:FlyoutContainer.MenuItems>
+    
     <bse:FlyoutContainer.Detail>
         <NavigationPage>
             <x:Arguments>

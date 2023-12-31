@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:maui="using:Microsoft.Maui.Controls.Platform"
+                    xmlns:controls="using:BSE.Maui.Controls.Platform.Uwp">
+    <DataTemplate x:Key="FlyoutBaseItemTemplate">
+        <maui:ShellNavigationViewItem  x:Name="navItem" MenuItemsSource="{Binding MenuItemsSource}">
+            <controls:FlyoutMenuItemView IsTabStop="false" IsSelected="{Binding IsSelected, ElementName=navItem, Mode=TwoWay}"></controls:FlyoutMenuItemView>
+        </maui:ShellNavigationViewItem>
+    </DataTemplate>
+    <DataTemplate x:Key="FlyoutMenuItemTemplate">
+        <maui:ShellNavigationViewItem x:Name="navItem" MenuItemsSource="{Binding MenuItemsSource}">
+            <controls:FlyoutMenuItemView IsTabStop="false" IsSelected="{Binding IsSelected, ElementName=navItem, Mode=TwoWay}"></controls:FlyoutMenuItemView>
+        </maui:ShellNavigationViewItem>
+    </DataTemplate>
+    
+</ResourceDictionary>

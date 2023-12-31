@@ -21,6 +21,7 @@ namespace BSE.Maui.Controls.Handlers
         protected override FlyoutContainerView CreatePlatformView()
         {
             var flyoutView = new FlyoutContainerView();
+            flyoutView.SetElement(VirtualView);
             return flyoutView;
         }
 
@@ -44,28 +45,33 @@ namespace BSE.Maui.Controls.Handlers
             UpdateValue(nameof(IFlyoutView.Detail));
         }
 
-        public static void MapFlyout(FlyoutContainerHandler handler, IFlyoutView container)
+        //public static void MapFlyout(FlyoutContainerHandler handler, IFlyoutView container)
+        //{
+        //    var t1 = handler.MauiContext;
+        //    var t2 = handler.VirtualView.Flyout.ToPlatform(handler.MauiContext);
+
+        //    if (handler.PlatformView is FlyoutContainerView rnv)
+        //    {
+        //        if (rnv.NavigationView != null)
+        //        {
+        //            rnv.NavigationView.PaneCustomContent = handler.VirtualView.Flyout.ToPlatform(handler.MauiContext);
+        //        }
+
+        //    }
+        //}
+
+        public static void MapMenuItems(FlyoutContainerHandler handler, FlyoutCont container)
         {
-            var t1 = handler.MauiContext;
-            var t2 = handler.VirtualView.Flyout.ToPlatform(handler.MauiContext);
-
-            if (handler.PlatformView is FlyoutContainerView rnv)
-            {
-                if (rnv.NavigationView != null)
-                {
-                    rnv.NavigationView.PaneCustomContent = handler.VirtualView.Flyout.ToPlatform(handler.MauiContext);
-                }
-
-            }
+            handler.PlatformView.UpdateMenuItemSource();
         }
 
-        public static void MapFlyoutWidth(FlyoutContainerHandler handler, FlyoutCont container)
-        {
-            if (container.Width >= 0)
-            {
+        //public static void MapFlyoutWidth(FlyoutContainerHandler handler, FlyoutCont container)
+        //{
+        //    if (container.Width >= 0)
+        //    {
 
-            }
-        }
+        //    }
+        //}
 
         public static void MapDetail(FlyoutContainerHandler handler, IFlyoutView flyoutView)
         {
